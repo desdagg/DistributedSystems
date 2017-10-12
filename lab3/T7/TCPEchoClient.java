@@ -57,6 +57,7 @@ public class TCPEchoClient
 			String message, response;
 			do
 			{
+				//ObjectOutputStream output = new ObjectOutputStream(link.getOutputStream());
 				System.out.print("Enter name: ");
 				name = userEntry.nextLine();
 				System.out.print("Enter age: ");
@@ -79,7 +80,7 @@ public class TCPEchoClient
 				//output.println(person); 		//Step 3.
 				//response = input.nextLine();	//Step 3.
 				System.out.println("\nSERVER> " /*+ response*/);
-			}while (!message.equals("***CLOSE***"));
+			}while (!name.equals("***CLOSE***"));
 		}
 		catch(IOException ioEx)
 		{
